@@ -26,9 +26,10 @@ public class SpringSecurity {
         // Updated configuration for HTTP security
         http
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/public/**").permitAll()  // Public endpoints
-                        .requestMatchers("/journal/**", "/user/**").authenticated()  // Authenticated endpoints
-                        .anyRequest().authenticated())  // Any other request requires authentication
+                        .requestMatchers("/journal/**", "/user/**").authenticated()
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .anyRequest().permitAll()
+                )
                 .httpBasic(withDefaults())  // Correct way to configure HTTP Basic
                 .csrf(csrf -> csrf.disable());  // Disable CSRF protection for simplicity
 
