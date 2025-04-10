@@ -19,7 +19,7 @@ A clean, modular, and secure backend system for managing personal or public jour
 - ⚙️ **Clean Architecture**  
   Follows separation of concerns: Controller → Service → Repository
 
-  - 🧾 **Structured Logging**  
+- 🧾 **Structured Logging**  
   Application-wide logging for key events using **SLF4J + Logback**
 ---
 
