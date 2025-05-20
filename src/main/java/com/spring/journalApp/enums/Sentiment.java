@@ -1,4 +1,8 @@
 package com.spring.journalApp.enums;
 
-public class Sentiment {
+public enum Sentiment {
+    HAPPY,
+    SAD,
+    ANGRY,
+    ANXIOUS;
 }

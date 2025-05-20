@@ -1,9 +1,7 @@
 package com.spring.journalApp.Entity;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.spring.journalApp.enums.Sentiment;
+import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,7 +15,9 @@ import java.util.Date;
 public class JournalEntry {
     @Id
     private ObjectId id;
+    @NonNull
     private String title;
     private String content;
+    private Sentiment sentiment;
     private LocalDateTime date;
 }
