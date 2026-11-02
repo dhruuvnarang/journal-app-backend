@@ -17,7 +17,7 @@ public class UserRepositoryImplTests {
     @Disabled("tested")
     @Test
     void testSaveNewUser() {
-        log.info(userRepository.getUserForSA().toString());
+//        log.info(userRepository.getUserForSA().toString());
         Assertions.assertNotNull(userRepository.getUserForSA());
     }
 }
